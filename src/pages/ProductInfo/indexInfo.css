@@ -1,0 +1,207 @@
+.show__details{
+    background-color: var(--background-color);
+    height: 127vh;
+}
+.show__details-content{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    border-radius: 14px;
+}
+.show__details-title{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.show__details-title .title__text{
+    font-size: var(--h2-font-size);
+    background-color: var(--bg-color);
+    color: white;
+    border-radius: 14px;
+    padding: 5px;
+}
+.show__details-title i {
+    font-size: var(--h1-font-size);
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+.active__icon i{
+    color: red;
+}
+.show__details-desc{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 10px;
+}
+.show__details-img{
+    width: 30%;
+    height: 30%;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+.show__details-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.show__details-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.show__details-data .data__name{
+    position: relative;
+    font-size: var(--h1-font-size);
+    text-transform: capitalize;
+}
+.show__details-data .data__name::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 5px;
+    background-color: var(--bg-color);
+}
+
+.show__details-data .data__rate{
+    display: block;
+}
+.data__rate i{
+    color: #d69f1e;
+    font-size: var(--h3-font-size);
+}
+.data__price{
+    color: var(--primary-text-color);
+    font-size: var(--h3-font-size);
+}
+.show__details-images{
+    width: 90%;
+    border-radius: 14px;
+    box-shadow: var(--box-shadow);
+}
+.images__list{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    padding: 15px;
+    border-radius: 4px;
+}
+.images__img{
+    width: 20%;
+    object-fit: contain;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .5s;
+}
+.show__details-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+.show__details-btn .btn__inc,
+.show__details-btn .btn__dec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    transition: .5s;
+}
+.btn__inc i,
+.btn__dec i{
+    font-size: var(--normal-font-size);
+}
+.show__details-btn .btn__inc:hover,
+.show__details-btn .btn__dec:hover{
+    background-color: var(--bg-color);
+    color: white;
+}
+.show__details-btn .btn__count{
+    text-align: center;
+    width: 30px;
+    border-radius: 4px;
+    color: var(--primary-text-color);
+}
+
+.show__details-back{
+    position: relative;
+    padding: 15px;
+    border-radius: 14px;
+    text-transform: capitalize;
+    font-size: var(--normal-font-size);
+    transition: .5s;
+}
+.show__details-back:hover{
+    background-color: var(--bg-color);
+    color: white;
+}
+
+/* BREAKPOINTS */
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .show__details{
+        height: 130vh;
+    }
+}
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .show__details{
+        height: 130vh;
+    }
+    .show__details-content{
+        width: 80%;
+    }
+    .show__details-data .data__name{
+        font-size: var(--h3-font-size);
+    }
+    .show__details-data .data__name::before{
+        height: 2px;
+        bottom: 3px;
+    }
+    .data__rate i{
+        font-size: var(--normal-font-size);
+    }
+    .data__price{
+        font-size: var(--normal-font-size);
+    }
+    .show__details-title .title__text{
+        font-size: var(--normal-font-size);
+    }
+    .show__details-title i {
+        font-size: var(--h2-font-size);
+    }
+}
+@media screen and (max-width: 576px) {
+    .show__details-content{
+        width: 90%;
+    }
+}
+/* For small devices */
+@media screen and (max-width: 360px) {
+    .show__details{
+        height: 130vh;
+    }
+    .show__details-content{
+        width: 90%;
+        row-gap: 1rem;
+    }
+}

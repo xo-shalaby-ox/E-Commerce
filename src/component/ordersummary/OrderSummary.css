@@ -1,0 +1,56 @@
+.summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    height: 74vh;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.summary__text{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var(--primary-text-color);
+    font-size: var(--big-font-size);
+}
+.text{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var(--secondary-text-color);
+    font-size: var(--h2-font-size);
+}
+.summary__btn{
+    position: relative;
+    padding: 15px;
+    border-radius: 14px;
+    text-transform: capitalize;
+    font-size: var(--normal-font-size);
+    transition: .5s;
+}
+.summary__btn:hover{
+    background-color: var(--bg-color);
+    color: white;
+}
+
+/* BREAKPOINTS */
+/* For medium devices */
+@media screen and (max-width: 576px) {
+    .summary__text{
+        font-size: var(--h2-font-size);
+    }
+    .text{
+        font-size: var(--h3-font-size);
+    }
+}
+/* For small devices */
+@media screen and (max-width: 360px) {
+    .text{
+        font-size: var(--normal-font-size);
+    }
+}

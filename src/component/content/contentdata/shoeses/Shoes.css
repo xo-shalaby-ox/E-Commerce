@@ -1,0 +1,15 @@
+.shoes{
+    background-color: var(--foreground-color);
+}
+.home__shoes{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+}
+.shoes__track{
+    width: 100%;
+}
+.shoes__track .slick-list{
+    padding: 10px;
+}

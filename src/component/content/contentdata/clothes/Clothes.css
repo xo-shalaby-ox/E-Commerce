@@ -1,0 +1,15 @@
+.clothes{
+    background-color: var(--foreground-color);
+}
+.home__clothes{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+}
+.clothes__track{
+    width: 100%;
+}
+.clothes__track .slick-list{
+    padding: 10px;
+}

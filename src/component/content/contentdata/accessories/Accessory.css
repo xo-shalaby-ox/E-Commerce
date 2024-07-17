@@ -1,0 +1,15 @@
+.accessory{
+    background-color: var(--foreground-color);
+}
+.home__accessory{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+}
+.accessory__track{
+    width: 100%;
+}
+.accessory__track .slick-list{
+    padding: 10px;
+}

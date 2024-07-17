@@ -1,0 +1,15 @@
+.t-Shirts{
+    background-color: var(--foreground-color);
+}
+.home__t-Shirts{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+}
+.t-Shirts__track{
+    width: 100%;
+}
+.t-Shirts__track .slick-list{
+    padding: 10px;
+}

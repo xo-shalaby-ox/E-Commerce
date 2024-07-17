@@ -1,0 +1,15 @@
+.sportswear{
+    background-color: var(--foreground-color);
+}
+.home__sportswear{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+}
+.sportswear__track{
+    width: 100%;
+}
+.sportswear__track .slick-list{
+    padding: 10px;
+}

@@ -1,0 +1,92 @@
+.services{
+    background-color: var(--foreground-color);
+}
+.home__services{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+}
+.services__track{
+    width: 100%;
+}
+.services__cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+.service__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    /* box-shadow: var(--box-shadow); */
+    border-radius: 8px;
+    transition: .5s;
+    cursor: pointer;
+}
+.service__card:hover{
+    transform: scale(1.04);
+}
+.service-card__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--icon-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.service-card__icon i{
+    font-size: var(--h2-font-size);
+    color: var(--primary-text-color);
+}
+.service-card__text{
+    font-size: var(--h2-font-size);
+    color: var(--primary-text-color);
+    padding: 10px;
+}
+.service__text{
+    font-size: var(--h3-font-size);
+    text-align: center;
+    color: var(--secondary-text-color);
+    letter-spacing: 1px;
+    padding: 5px;
+}
+/* BREAKPOINTS */
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .services__cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .service-card__text{
+        font-size: var(--h3-font-size);
+    }
+    .service__text{
+        font-size: var(--normal-font-size);
+    }
+}
+@media screen and (max-width: 576px) {
+    .service-card__text{
+        font-size: var(--normal-font-size);
+    }
+    .service__text{
+        font-size: var(--small-font-size);
+    }
+}
+/* For small devices */
+@media screen and (max-width: 360px) {
+    .services__cards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
