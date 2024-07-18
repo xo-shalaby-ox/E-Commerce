@@ -97,6 +97,26 @@
   animation-delay: 0.3s;
 }
 
+.up{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 14px;
+  z-index: 3;
+  bottom: 15%;
+  right: 15px;
+  cursor: pointer;
+}
+.up i{
+  font-size: var(--h2-font-size);
+  color: var(--primary-text-color);
+}
+
 /* ***************************** */
 /* BREAKPOINTS */
 /* For small devices */

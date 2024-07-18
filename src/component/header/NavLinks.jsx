@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
 import { Link, useLocation } from "react-router-dom";
+import { LoginForm } from "./loginForm/Index";
 
 export const NavLinks = () => {
-  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+  const [form, setForm] = useState(false);
+  const [fullName, setFullName] = useState("");
   const [Toggle, showMenu] = useState(true);
   const [activeNav, setActiveNav] = useState("#home");
 
@@ -20,27 +21,54 @@ export const NavLinks = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    const storedFullName = localStorage.getItem("fullName");
+    if (storedFullName) {
+      setFullName(storedFullName);
+    }
+  }, []);
+
+  const handleSubmit = (firstName, lastName) => {
+    const fullName = `${firstName} ${lastName}`;
+    setFullName(fullName);
+    localStorage.setItem("fullName", fullName);
+  };
+
+  const handleSignOut = () => {
+    localStorage.removeItem("fullName");
+    setFullName("");
+    localStorage.removeItem("firstName");
+    localStorage.removeItem("lastName");
+  };
+
   return (
     <div className="nav__links">
       <div className="nav__links-content container flex">
         <div className="nav__username flex">
-          {isAuthenticated ? (
-            <button
-              onClick={() =>
-                logout({ logoutParams: { returnTo: window.location.origin } })
-              }
-              className="logout"
-            >
-              <i className="bx bxs-user"></i>
-            </button>
-          ) : (
-            <button onClick={() => loginWithRedirect()} className="login">
-              <i className="bx bx-user-plus"></i>
-            </button>
+          {!fullName && (
+            <i
+              className="uil uil-user-plus login"
+              onClick={() => setForm(!form)}
+            ></i>
           )}
-          {isAuthenticated && <p>{user.name}</p>}
+          <div className={form ? "form__inputs active__form" : "form__inputs"}>
+            <LoginForm onSubmit={handleSubmit} />
+            <i
+              className="uil uil-times close"
+              onClick={() => setForm(!form)}
+            ></i>
+          </div>
+          {fullName ? (
+            <div className="logout">
+              <p>{fullName}</p>
+              <i
+                className="uil uil-sign-out-alt signout"
+                onClick={handleSignOut}
+              ></i>
+            </div>
+          ) : null}
         </div>
-        <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
+        <div className={Toggle ? "side__menu show__side-menu" : "side__menu"}>
           <nav className="nav__list">
             <Link className="nav__item" to="/">
               <a

@@ -11,8 +11,9 @@ import { Accessory } from "../../component/content/contentdata/accessories/Acces
 import { Iphone } from "../../component/content/contentdata/iphone/Iphone";
 import { Machine } from "../../component/content/contentdata/machine/Machine";
 import { Footer } from "../../component/content/footer/Footer";
-import "./Home.css";
 import { Services } from "../../component/content/services/Services";
+
+import "./Home.css";
 
 export const Home = () => {
   return (
@@ -219,6 +220,9 @@ export const Home = () => {
       <div className="footer section">
         <Footer />
       </div>
+      {/* <a href="#" className="up">
+        <i className="bx bx-up-arrow-alt"></i>
+      </a> */}
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useShopContext } from "../context/Context";
 
 export const NavData = () => {
@@ -27,7 +27,9 @@ export const NavData = () => {
     <div className="nav__data">
       <div className="nav__data-content container flex">
         <div className="nav__logo flex">
-          <p className="nav__logo-letter">Trenders</p>
+          <a href="#" className="nav__logo-letter">
+            Trenders
+          </a>
         </div>
         <div className="nav__user flex">
           <div className="nav__prod flex">
@@ -52,14 +54,16 @@ export const NavData = () => {
                 />
                 <ul className="item__list">
                   {filteredProduct.map((product) => (
-                    <li className="item" key={product.id}>
-                      <a
-                        href={`#${product.type}`}
-                        onClick={() => setOpen(!open)}
-                      >
+                    <NavLink
+                      key={product.id}
+                      to={`/products/${product.id}`}
+                      onClick={() => setOpen(!open)}
+                      className="list"
+                    >
+                      <li className="item" key={product.id}>
                         {product.productName}
-                      </a>
-                    </li>
+                      </li>
+                    </NavLink>
                   ))}
                 </ul>
               </div>

@@ -106,7 +106,7 @@ export const Sidebar = () => {
                 }
                 onClick={() => setActiveLink("#iphone")}
               >
-                iphons
+                phones
               </a>
             </li>
             <li className="link__item">

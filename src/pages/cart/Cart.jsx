@@ -13,6 +13,9 @@ export const Cart = () => {
   );
 
   const Summary = () => {
+    if (cartProducts.length === 0) {
+      return;
+    }
     setTimeout(() => navigate("/order-summary"), 4000);
     setToggle(!toggle);
     setTimeout(() => window.location.reload(), 4500);
