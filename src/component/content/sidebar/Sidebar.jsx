@@ -27,7 +27,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#suits" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#suits")}
+                onClick={() => {
+                  setActiveLink("#suits");
+                  setShow(!Toggle);
+                }}
               >
                 suits
               </a>
@@ -38,7 +41,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#sportswear" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#sportswear")}
+                onClick={() => {
+                  setActiveLink("#sportswear");
+                  setShow(!Toggle);
+                }}
               >
                 sportswear
               </a>
@@ -49,7 +55,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#clothes" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#clothes")}
+                onClick={() => {
+                  setActiveLink("#clothes");
+                  setShow(!Toggle);
+                }}
               >
                 clothes
               </a>
@@ -60,7 +69,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#dresses" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#dresses")}
+                onClick={() => {
+                  setActiveLink("#dresses");
+                  setShow(!Toggle);
+                }}
               >
                 dresses
               </a>
@@ -71,7 +83,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#t-Shirts" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#t-Shirts")}
+                onClick={() => {
+                  setActiveLink("#t-Shirts");
+                  setShow(!Toggle);
+                }}
               >
                 t-Shirts
               </a>
@@ -82,7 +97,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#shoes" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#shoes")}
+                onClick={() => {
+                  setActiveLink("#shoes");
+                  setShow(!Toggle);
+                }}
               >
                 shoes
               </a>
@@ -93,7 +111,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#accessories" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#accessories")}
+                onClick={() => {
+                  setActiveLink("#accessories");
+                  setShow(!Toggle);
+                }}
               >
                 accessories
               </a>
@@ -104,7 +125,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#iphone" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#iphone")}
+                onClick={() => {
+                  setActiveLink("#iphone");
+                  setShow(!Toggle);
+                }}
               >
                 phones
               </a>
@@ -115,7 +139,10 @@ export const Sidebar = () => {
                 className={
                   activeLink === "#machines" ? "link active__link" : "link"
                 }
-                onClick={() => setActiveLink("#machines")}
+                onClick={() => {
+                  setActiveLink("#machines");
+                  setShow(!Toggle);
+                }}
               >
                 machines
               </a>

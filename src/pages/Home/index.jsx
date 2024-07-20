@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Sidebar } from "../../component/content/sidebar/Sidebar";
 import { SlideHome } from "../../component/content/slidehome/SlideHome";
 import { Suit } from "../../component/content/contentdata/suits/Suit";
@@ -16,6 +16,30 @@ import { Services } from "../../component/content/services/Services";
 import "./Home.css";
 
 export const Home = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div className="home section">
@@ -163,7 +187,7 @@ export const Home = () => {
       <div className="iphone section">
         <div className="home__iphone container">
           <div className="subtitle section">
-            <h1 className="subtitle-text">iphone</h1>
+            <h1 className="subtitle-text">phones</h1>
             <div className="typing-indicator">
               <div className="typing-circle"></div>
               <div className="typing-circle"></div>
@@ -220,9 +244,13 @@ export const Home = () => {
       <div className="footer section">
         <Footer />
       </div>
-      {/* <a href="#" className="up">
-        <i className="bx bx-up-arrow-alt"></i>
-      </a> */}
+      {showButton && (
+        <div className="up">
+          <button className="btn__up" onClick={handleScrollToTop}>
+            <i className="bx bx-up-arrow-alt"></i>
+          </button>
+        </div>
+      )}
     </>
   );
 };

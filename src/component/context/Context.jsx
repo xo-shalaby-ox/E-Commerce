@@ -25,7 +25,7 @@ export const ShopContextProvider = (props) => {
     const searchQuery = event.target.value.toLowerCase();
     setQuery(searchQuery);
 
-    const filtered = PRODUCTS.filter((product) =>
+    const filtered = filter.filter((product) =>
       product.productName.toLocaleLowerCase().includes(searchQuery)
     );
     setFilteredProduct(filtered);

@@ -34,7 +34,34 @@
 .form__list input:focus{
     box-shadow: 1px 2px 8px var(--bg-color);
 }
-.form__list .btn__submit{
+.form__list .btn__login{
+    display: none;
+}
+.form__list input:nth-child(3),
+.form__list input:nth-child(4){
+    display: none;
+}
+.form__list.active__form input:nth-child(1),
+.form__list.active__form input:nth-child(2),
+.form__list.active__form input:nth-child(5),
+.form__list.active__form input:nth-child(6),
+.form__list.active__form .btn__signup
+{
+    display: none;
+}
+.form__list.active__form input:nth-child(3),
+.form__list.active__form input:nth-child(4),
+.form__list.active__form .btn__signup{
+    display: flex;
+}
+.form__list.active__form .btn__login{
+    display: flex;
+}
+.form__list.active__form .btn__signup{
+    display: none;
+}
+.form__list .btn__signup,
+.form__list .btn__login{
     position: relative;
     padding: 10px;
     border-radius: 14px;
@@ -43,9 +70,17 @@
     box-shadow: var(--box-shadow);
     transition: .5s;
 }
-.form__list .btn__submit:hover{
+.form__list .btn__signup:hover,
+.form__list .btn__login:hover{
     background-color: var(--bg-color);
     color: var(--primary-text-color);
+}
+.error{
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    padding: 3px;
+    border-radius: 4px;
 }
 
 

@@ -32,6 +32,7 @@ export const NavLinks = () => {
     const fullName = `${firstName} ${lastName}`;
     setFullName(fullName);
     localStorage.setItem("fullName", fullName);
+    setForm(!form);
   };
 
   const handleSignOut = () => {
@@ -73,7 +74,10 @@ export const NavLinks = () => {
             <Link className="nav__item" to="/">
               <a
                 href="#home"
-                onClick={() => setActiveNav("#home")}
+                onClick={() => {
+                  setActiveNav("#home");
+                  showMenu(!Toggle);
+                }}
                 className={
                   activeNav === "#home" ? "nav__link active-link" : "nav__link"
                 }
@@ -84,7 +88,10 @@ export const NavLinks = () => {
             <Link className="nav__item" to="/about">
               <a
                 href="#about"
-                onClick={() => setActiveNav("#about")}
+                onClick={() => {
+                  setActiveNav("#about");
+                  showMenu(!Toggle);
+                }}
                 className={
                   activeNav === "#about" ? "nav__link active-link" : "nav__link"
                 }
@@ -95,7 +102,10 @@ export const NavLinks = () => {
             <Link className="nav__item" to="/contact">
               <a
                 href="#contact"
-                onClick={() => setActiveNav("#contact")}
+                onClick={() => {
+                  setActiveNav("#contact");
+                  showMenu(!Toggle);
+                }}
                 className={
                   activeNav === "#contact"
                     ? "nav__link active-link"

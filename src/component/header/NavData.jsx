@@ -27,9 +27,9 @@ export const NavData = () => {
     <div className="nav__data">
       <div className="nav__data-content container flex">
         <div className="nav__logo flex">
-          <a href="#" className="nav__logo-letter">
+          <Link to="/" className="nav__logo-letter">
             Trenders
-          </a>
+          </Link>
         </div>
         <div className="nav__user flex">
           <div className="nav__prod flex">

@@ -68,7 +68,7 @@
     padding: 10px;
     bottom: 10px;
     left: -65px;
-    border-radius: 4px 0 0 4px;
+    border-radius: 4px;
     cursor: pointer;
 }
 .active__setting{

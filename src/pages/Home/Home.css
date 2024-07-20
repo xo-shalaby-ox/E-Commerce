@@ -102,19 +102,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 40px;
   height: 50px;
   background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
   border-radius: 14px;
   z-index: 3;
-  bottom: 15%;
+  bottom: 13%;
   right: 15px;
   cursor: pointer;
 }
-.up i{
+.up .btn__up{
   font-size: var(--h2-font-size);
   color: var(--primary-text-color);
+  background-color: transparent;
 }
 
 /* ***************************** */

@@ -45,7 +45,7 @@
 .slide__description .slide__btn {
     width: 250px;
     padding: 20px;
-    background-color: rgba(196, 196, 196, 0.589);
+    background-color: var(--bg-color);
     color: var(--primary-text-color);
     border-radius: 20px;
     box-shadow: var(--box-shadow);

@@ -13,6 +13,23 @@ export const Cart = () => {
   );
 
   const Summary = () => {
+    const fullName = localStorage.getItem("fullName");
+    const cartItemColor = localStorage.getItem("cartItemColor");
+    const cartItemSize = localStorage.getItem("cartItemSize");
+
+    if (!fullName) {
+      alert("You must register first!");
+      return;
+    }
+    if (!cartItemColor) {
+      alert(" enter your color please");
+      return;
+    }
+    if (!cartItemSize) {
+      alert(" choose your size please");
+      return;
+    }
+
     if (cartProducts.length === 0) {
       return;
     }
