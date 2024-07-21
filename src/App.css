@@ -120,6 +120,9 @@ h3 {
 .flex {
   display: flex;
 }
+.App{
+  background-color: var(--foreground-color) ;
+}
 
 
 /* BREAKPOINTS */

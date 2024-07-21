@@ -198,7 +198,7 @@
     }
 }
 /* For small devices */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
     .show__details{
         height: 130vh;
     }
