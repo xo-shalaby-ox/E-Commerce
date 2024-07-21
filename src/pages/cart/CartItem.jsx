@@ -4,7 +4,7 @@ import { useShopContext } from "../../component/context/Context";
 export const CartItem = (props) => {
   const [value, setValue] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
-  const { id, image, productName, price } = props.data;
+  const { id, image, productName, price, type } = props.data;
   const {
     cartItem,
     addToCart,
@@ -42,6 +42,14 @@ export const CartItem = (props) => {
       setSelectedSize(storedSize);
     }
   }, []);
+
+  const showSizeOptions = [
+    "suits",
+    "sportswear",
+    "clothes",
+    "t-shirts",
+    "dresses",
+  ].includes(type.toLowerCase());
   return (
     <div className="product">
       <div className="cart__item">
@@ -60,38 +68,40 @@ export const CartItem = (props) => {
               onChange={handleInputChange}
               required
             />
-            <div className="cart__item-size">
-              <div
-                className={`size ${selectedSize === "S" ? "active" : ""}`}
-                onClick={() => handleSizeClick("S")}
-              >
-                S
+            {showSizeOptions && (
+              <div className="cart__item-size">
+                <div
+                  className={`size ${selectedSize === "S" ? "active" : ""}`}
+                  onClick={() => handleSizeClick("S")}
+                >
+                  S
+                </div>
+                <div
+                  className={`size ${selectedSize === "M" ? "active" : ""}`}
+                  onClick={() => handleSizeClick("M")}
+                >
+                  M
+                </div>
+                <div
+                  className={`size ${selectedSize === "L" ? "active" : ""}`}
+                  onClick={() => handleSizeClick("L")}
+                >
+                  L
+                </div>
+                <div
+                  className={`size ${selectedSize === "XL" ? "active" : ""}`}
+                  onClick={() => handleSizeClick("XL")}
+                >
+                  XL
+                </div>
+                <div
+                  className={`size ${selectedSize === "2XL" ? "active" : ""}`}
+                  onClick={() => handleSizeClick("2XL")}
+                >
+                  2XL
+                </div>
               </div>
-              <div
-                className={`size ${selectedSize === "M" ? "active" : ""}`}
-                onClick={() => handleSizeClick("M")}
-              >
-                M
-              </div>
-              <div
-                className={`size ${selectedSize === "L" ? "active" : ""}`}
-                onClick={() => handleSizeClick("L")}
-              >
-                L
-              </div>
-              <div
-                className={`size ${selectedSize === "XL" ? "active" : ""}`}
-                onClick={() => handleSizeClick("XL")}
-              >
-                XL
-              </div>
-              <div
-                className={`size ${selectedSize === "2XL" ? "active" : ""}`}
-                onClick={() => handleSizeClick("2XL")}
-              >
-                2XL
-              </div>
-            </div>
+            )}
           </div>
         </div>
         <div className="cart__item-btn">
